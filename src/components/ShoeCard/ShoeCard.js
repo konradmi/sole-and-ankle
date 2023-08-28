@@ -36,6 +36,7 @@ const ShoeCard = ({
       <Wrapper>
         <ImageWrapper>
           <Image alt="" src={imageSrc} />
+          <Flag>{variant}</Flag>
         </ImageWrapper>
         <Spacer size={12} />
         <Row>
@@ -49,6 +50,16 @@ const ShoeCard = ({
     </Link>
   );
 };
+
+const Flag = styled.div`
+  position: absolute;
+  top: 12px;
+  right: -4px;
+  background-color: ${COLORS.secondary};
+  padding: 8px 10px;
+  border-radius: 2px;
+  color: ${COLORS.white};
+`
 
 const Link = styled.a`
   text-decoration: none;
